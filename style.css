@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+ body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+ }
+ .container{
+    position: relative;
+    width: 500px;
+    height: 530px;
+    display: flex;
+    align-items: center  ;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+     /* dalam bungkus login-box 11.21*/
+   padding: 0 45px;
+      /* dalam bungkus */
+ }
+ .container .login-box{
+   position: relative;
+   width: 100%;
+ }
+  /* dalam wes di pecah dadi kolom 14.40*/
+.login-box .page-box{
+   display: flex;
+   flex-direction: column;
+}
+   /* dalam nko dadi loro item login dan form*/
+
+   /* bungkus halaman form 14.50*/
+.login-box .page{
+   width: 100%;
+}
+ /* warnani kuning ben ambane keton*/
+
+ /* dalam email move -500 kri 15.20*/
+ .page-box .page.email-page{
+   transform: translateX(0);
+ }
+  /* dalam email move set 0 masuk bungkus login-box*/
+
+ /* dalam pw move 500  kanan 14.15 */
+ .page-box .page.password-page{
+   position: absolute;
+   transform: translateX(500px);
+   /* jarak stlah masuk*/
+   margin-top: 140px;
+   /* turun dari login-box 15.40*/
+ }
+  /* dalam pw move set 0 masuk bungkus login-box*/
+
+ .page-box .login-title{
+   text-align: center;
+   color: var(--text-color);
+   margin-bottom: 40px;
+ }
+ /* dalam bungkus judul*/
+ .login-title h2{
+   font-size: 32px;
+   line-height: 1.5;
+ }
+ .login-title p{
+   font-size: 16px;
+   font-weight: 500;
+ }
+ /* bungkus judul*/
+
+ .page .input-box{
+   position: relative;
+   width: 100%;
+   height: 55px;
+ }
+ .input-box input{
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   border: 2px solid var(--second-bg-color);
+   border-radius: 6px;
+   outline: none;
+   color: var(--text-color);
+   font-size: 16px;
+   padding: 0 16px;
+   transition: .3s ease;
+ }
+ /* makanisme animasi ease b.o klap klip 13.25 autofocus*/
+ .input-box input:focus,
+.input-box input:valid{
+   border-color: var(--main-color);
+}
+/* makanisme animasi ease naik tulisan */
+
+  /* bungkus input 7.30 not work trnform jwbnya relative .page 8.00*/
+ .input-box label{
+   position: absolute;
+   top: 50%;
+   left: 20px;
+   transform: translateY(-50%); 
+   font-size: 18px;
+   color: var(--text-color);
+   pointer-events: none;
+   transition: .3s ease;
+ }
+/* makanisme animasi ease naik tulisan */
+.input-box input:focus~label,
+.input-box input:valid~label{
+   top: 1px;
+   left: 12px;
+   font-size: 13px;
+   color: var(--main-color);
+   background: var(--bg-color);
+   padding: 0 6px;
+}
+/* makanisme naik tulisan*/
+
+/* forgot style*/
+.forgot{
+   margin-top: 6px;
+}
+/* forgot style 17.00*/
+.forgot.show{
+   display: flex;
+   margin: 10px 0 70px;
+   justify-content: space-between;
+}
+.forgot.show label{
+   font-size: 14.5px;
+   color: var(--text-color);
+   cursor: pointer;
+}
+.forgot.show label input{
+   cursor: pointer;
+   margin-right: 3px;
+   accent-color: var(--main-color);
+}
+/* forgot style jarak 18.00*/
+
+.forgot a{
+   font-size: 14.5px;
+   color: var(--main-color);
+   text-decoration: none;
+
+}
+.forgot a:hover{
+   text-decoration: underline;
+}
+/* forgot style*/
+
+/* pertanyaan style 9.00*/
+.guest-mode{
+   margin: 40px 0;
+}
+.guest-mode p{
+   font-size: 14.5px;
+   color: var(--text-color);
+}
+.guest-mode a{
+   font-size: 14.5px;
+   color: var(--main-color);
+   text-decoration: none;
+}
+.guest-mode a:hover{
+   text-decoration: underline;
+}
+/* pertanyaan style 9.40*/
+
+/* tombol gawe meped kanan kiri*/
+.btn-box{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.btn-box a{
+   font-size: 14.5px;
+   color: var(--main-color);
+   text-decoration: none;
+}
+.btn-box a:hover{
+   text-decoration: underline;
+}
+/* tombol gawe style 10.00*/
+
+/* tombol next 10.5*/
+.btn-box button{
+   width: 90px;
+   height: 40px;
+   font-size: 16px;
+   font-weight: 600;
+   color: var(--bg-color);
+   background: var(--main-color);
+   border: 2px solid var(--main-color);
+   border-radius: 6px;
+   outline: none;
+   cursor: pointer;
+}
+/* tombol next 10.36*/
+
+/* tombol back 18.30*/
+.btn-box button:nth-child(1){
+   color: var(--main-color);
+   background: transparent;
+}
