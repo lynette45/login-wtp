@@ -33,8 +33,12 @@
     border: 2px solid var(--main-color);
     border-radius: 8px;
      /* dalam bungkus login-box 11.21*/
-   padding: 0 45px;
+    padding: 0 45px;
       /* dalam bungkus */
+      /* sembunyikan sisi kanan / kiri */
+    overflow: hidden;
+      /* biar satu sisi ajh yang kelihatan */
+
  }
  .container .login-box{
    position: relative;
@@ -56,8 +60,16 @@
  /* dalam email move -500 kri 15.20*/
  .page-box .page.email-page{
    transform: translateX(0);
+   transition: .25s ease-in-out;
  }
   /* dalam email move set 0 masuk bungkus login-box*/
+
+/* script klik active*/
+.page-box.active-pass .page.email-page{
+   transform: translateX(-500px);
+}
+/* script klik active*/
+
 
  /* dalam pw move 500  kanan 14.15 */
  .page-box .page.password-page{
@@ -66,9 +78,14 @@
    /* jarak stlah masuk*/
    margin-top: 140px;
    /* turun dari login-box 15.40*/
+   transition: .25s ease-in-out;
  }
   /* dalam pw move set 0 masuk bungkus login-box*/
-
+/* script klik masuk kekanan active*/
+.page-box.active-pass .page.password-page{
+   transform: translateX(0);
+}
+/* script klik active*/
  .page-box .login-title{
    text-align: center;
    color: var(--text-color);
@@ -131,58 +148,6 @@
    padding: 0 6px;
 }
 /* makanisme naik tulisan*/
-
-/* forgot style*/
-.forgot{
-   margin-top: 6px;
-}
-/* forgot style 17.00*/
-.forgot.show{
-   display: flex;
-   margin: 10px 0 70px;
-   justify-content: space-between;
-}
-.forgot.show label{
-   font-size: 14.5px;
-   color: var(--text-color);
-   cursor: pointer;
-}
-.forgot.show label input{
-   cursor: pointer;
-   margin-right: 3px;
-   accent-color: var(--main-color);
-}
-/* forgot style jarak 18.00*/
-
-.forgot a{
-   font-size: 14.5px;
-   color: var(--main-color);
-   text-decoration: none;
-
-}
-.forgot a:hover{
-   text-decoration: underline;
-}
-/* forgot style*/
-
-/* pertanyaan style 9.00*/
-.guest-mode{
-   margin: 40px 0;
-}
-.guest-mode p{
-   font-size: 14.5px;
-   color: var(--text-color);
-}
-.guest-mode a{
-   font-size: 14.5px;
-   color: var(--main-color);
-   text-decoration: none;
-}
-.guest-mode a:hover{
-   text-decoration: underline;
-}
-/* pertanyaan style 9.40*/
-
 /* tombol gawe meped kanan kiri*/
 .btn-box{
    display: flex;
